@@ -1,0 +1,19 @@
+snippet ##bashScript
+#!/bin/bash
+# ------------------------------------------------------------------
+# [BoriS] ${1:Title}
+#          ${2:Description}
+# ------------------------------------------------------------------
+$0
+endsnippet
+
+snippet ##bashIf
+if [ "${1:$VAR1}" = "${2:$VAR2}" ]; then
+	${3:echo true}
+else
+	${4:echo false}
+fi
+$0
+endsnippet
+
+

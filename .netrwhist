@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/spasojevic/SCG/fasterMethodLookup/data'
+let g:netrw_dirhist_2='/Users/spasojevic/SCG/fasterMethodLookup/data/distance'
+let g:netrw_dirhist_3='/Users/spasojevic/SCG/fasterMethodLookup/data/distance-rand'
+let g:netrw_dirhist_4='/Users/spasojevic/SCG/fasterMethodLookup/papers-faster-method-lookup-2014'
+let g:netrw_dirhist_5='/Users/spasojevic/.vim/bundle/Vundle.vim'
