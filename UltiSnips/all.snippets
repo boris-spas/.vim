@@ -7,13 +7,10 @@ snippet ##bashScript
 $0
 endsnippet
 
-snippet ##bashIf
-if [ "${1:$VAR1}" = "${2:$VAR2}" ]; then
-	${3:echo true}
-else
-	${4:echo false}
-fi
-$0
-endsnippet
-
-
+snipet echoDateBox
+function echoDateBox() {
+        echo '#######################################################################'
+        echo "#              " `date`                "                         #"
+        echo '#######################################################################'
+	}
+endsnipet
