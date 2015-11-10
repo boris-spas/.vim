@@ -1,3 +1,31 @@
-snippet cite
+priority 25
+snippet \c "\cite{}" 
 \cite{${1}} ${0}
 endsnippet
+
+snippet \e "\emph{}" 
+\emph{$1}$0
+endsnippet
+
+snippet \f "\footnote{}" 
+\footnote{$1}$0
+endsnippet
+
+snippet \a "\autoref{}"
+\autoref{$1}$0
+endsnippet
+
+snippet sec "Section" b
+%===============================================================================
+\section{${1:section name}}
+\seclabel{${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+$0
+endsnippet
+
+snippet sub "Subsection" b
+%-------------------------------------------------------------------------------
+\subsection{${1:subsection name}}
+\seclabel{${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+$0
+endsnippet
+
