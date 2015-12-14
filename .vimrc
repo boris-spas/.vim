@@ -27,6 +27,7 @@ let g:UltiSnipsEditSplit="vertical"
 " Plugin 'fatih/vim-go'
 
 Plugin 'ntpeters/vim-better-whitespace'
+autocmd VimEnter * :delcommand EnableWhitespace
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
