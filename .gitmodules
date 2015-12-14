@@ -13,3 +13,6 @@
 [submodule "tmux-plugins/tmux-battery"]
 	path = tmux-plugins/tmux-battery
 	url = https://github.com/tmux-plugins/tmux-battery.git
+[submodule "bundle/vim-better-whitespace"]
+	path = bundle/vim-better-whitespace
+	url = https://github.com/ntpeters/vim-better-whitespace
