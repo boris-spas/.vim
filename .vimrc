@@ -28,6 +28,7 @@ let g:UltiSnipsEditSplit="vertical"
 
 Plugin 'ntpeters/vim-better-whitespace'
 autocmd VimEnter * :delcommand EnableWhitespace
+autocmd VimEnter * :delcommand ELP
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -49,4 +50,6 @@ filetype plugin indent on
 set encoding=utf-8
 set tabstop=4
 set shiftwidth=4
-"set spell 
+"set spell
+set hlsearch
+let g:tex_flavor = "latex"
