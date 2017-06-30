@@ -1,0 +1,9 @@
+[user]
+    email = <>
+    name = <>
+[core]
+    editor = vim
+[alias]
+    current-branch  = "!git rev-parse --abbrev-ref HEAD"
+    rebase-from-master = "!BRANCH=$(git current-branch) && git checkout master && git pull && git checkout $BRANCH && git rebase master"
+    fix-history = "!BRANCH=$(git current-branch) && git rebase -i $(git merge-base $BRANCH master)"
