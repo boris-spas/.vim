@@ -84,6 +84,7 @@ set path+=**
 """""""""""""""""""""""""""""""""""""""""""""
 "  Show a list of options when I press tab  "
 """""""""""""""""""""""""""""""""""""""""""""
+set wildmode=longest,list,full
 set wildmenu
 
 """""""""""""""""""""""""""
@@ -98,3 +99,19 @@ nnoremap j gj
 nnoremap k gk
 vnoremap j gj
 vnoremap k gk
+
+"""""""""""""""""""""""""""""""
+"  open in tab when I use gf  "
+"""""""""""""""""""""""""""""""
+nnoremap gf <c-w>gf
+
+"""""""""""""""""""""""""""""""
+" Format xml files with gg=G  "
+"""""""""""""""""""""""""""""""
+autocmd FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
+
+"""""""""""""""""""""""""""""""
+" Underline misspelled words  "
+"""""""""""""""""""""""""""""""
+hi clear SpellBad
+hi SpellBad cterm=underline
