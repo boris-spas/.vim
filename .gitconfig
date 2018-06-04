@@ -4,6 +4,16 @@
 [core]
     editor = vim
 [alias]
+    last-commit = "log -n 1"
+    last-commit-diff = "diff HEAD^ HEAD"
     current-branch  = "!git rev-parse --abbrev-ref HEAD"
     rebase-from-master = "!BRANCH=$(git current-branch) && git checkout master && git pull && git checkout $BRANCH && git rebase master"
-    fix-history = "!BRANCH=$(git current-branch) && git rebase -i $(git merge-base $BRANCH master)"
+    push-after-rebase = "push --force-with-lease"
+    fix-pr-history = "!BRANCH=$(git current-branch) && git rebase -i $(git merge-base $BRANCH master)"
+    log-pr = "!clear && BRANCH=$(git current-branch) && git log $(git merge-base $BRANCH master)..HEAD"
+    ciff = "!clear && git diff"
+    continue-rebase="!git add -u && git rebase --continue"
+    find-merge-for-commit = "!sh -c 'commit=$0 && branch=${1:-HEAD} && (git rev-list $commit..$branch --ancestry-path \
+        | cat -n; git rev-list $commit..$branch --first-parent | cat -n) | sort -k2 -s | uniq -f1 -d | sort -n | tail -1 | cut -f2'"
+    show-merge-for-commit = "!sh -c 'merge=$(git find-merge-for-commit $0 $1) && [ -n \"$merge\" ] && git show $merge'"
+
