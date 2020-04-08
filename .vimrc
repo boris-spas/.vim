@@ -40,6 +40,8 @@ Plugin 'nsf/gocode', {'rtp': 'vim/'}
 """"""""""""""""
 Plugin 'ntpeters/vim-better-whitespace'
 autocmd VimEnter * :delcommand EnableWhitespace
+autocmd VimEnter * :delcommand EnableStripWhitespaceOnSave
+autocmd VimEnter * :delcommand ELP
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -69,12 +71,13 @@ set showcmd
 set smartcase
 set encoding=utf-8
 set tabstop=4
+set expandtab
 set shiftwidth=4
-set spell
-set tw=80
+set nospell
 set hlsearch
 let g:tex_flavor = "latex"
 set backspace=indent,eol,start
+set nowrap
 
 """"""""""""""""""""""""""""""""""""""""""
 "  look in subfolders when using 'find'  "
