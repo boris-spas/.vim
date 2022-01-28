@@ -41,7 +41,6 @@ Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'ntpeters/vim-better-whitespace'
 autocmd VimEnter * :delcommand EnableWhitespace
 autocmd VimEnter * :delcommand EnableStripWhitespaceOnSave
-autocmd VimEnter * :delcommand ELP
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
