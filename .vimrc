@@ -42,6 +42,11 @@ Plugin 'ntpeters/vim-better-whitespace'
 autocmd VimEnter * :delcommand EnableWhitespace
 autocmd VimEnter * :delcommand EnableStripWhitespaceOnSave
 
+""""""""""""""""
+"  vim-json    "
+""""""""""""""""
+Plugin 'elzr/vim-json'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -77,6 +82,12 @@ set hlsearch
 let g:tex_flavor = "latex"
 set backspace=indent,eol,start
 set nowrap
+colorscheme elflord
+hi CursorLine cterm=NONE ctermbg=235
+hi CursorColumn cterm=NONE ctermbg=235
+set cursorline
+set foldmethod=syntax
+set foldlevel=99
 
 """"""""""""""""""""""""""""""""""""""""""
 "  look in subfolders when using 'find'  "
@@ -117,3 +128,9 @@ autocmd FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/n
 """""""""""""""""""""""""""""""
 hi clear SpellBad
 hi SpellBad cterm=underline
+
+"""""""""""""""""""""
+"  <leader> tricks  "
+"""""""""""""""""""""
+:map <leader>c :set nohlsearch<CR>
+

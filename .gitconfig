@@ -11,9 +11,10 @@
     push-after-rebase = "push --force-with-lease"
     fix-pr-history = "!BRANCH=$(git current-branch) && git rebase -i $(git merge-base $BRANCH master)"
     log-pr = "!clear && BRANCH=$(git current-branch) && git log $(git merge-base $BRANCH master)..HEAD"
+    ciff-pr = "!clear && BRANCH=$(git current-branch) && git diff $(git merge-base $BRANCH master)..HEAD"
     ciff = "!clear && git diff"
     continue-rebase="!git add -u && git rebase --continue"
     find-merge-for-commit = "!sh -c 'commit=$0 && branch=${1:-HEAD} && (git rev-list $commit..$branch --ancestry-path \
         | cat -n; git rev-list $commit..$branch --first-parent | cat -n) | sort -k2 -s | uniq -f1 -d | sort -n | tail -1 | cut -f2'"
     show-merge-for-commit = "!sh -c 'merge=$(git find-merge-for-commit $0 $1) && [ -n \"$merge\" ] && git show $merge'"
-
+    vommit = "commit -v"
