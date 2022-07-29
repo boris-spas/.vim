@@ -24,8 +24,9 @@ font pango:monospace 8
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-bindsym $mod+BackSpace exec i3lock
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -c 222222 -e
+
+bindsym $mod+BackSpace exec i3lock -c 222222 -e
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -220,5 +221,6 @@ focus_follows_mouse no
 bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 bindsym $mod+b exec firefox
-bindsym $mod+p exec autorandr common; exec autorandr horizontal
+bindsym $mod+p exec autorandr common
+bindsym $mod+Shift+P exec autorandr horizontal
 bindsym $mod+Ctrl+p workspace 1; move workspace to output right; workspace 2; move workspace to output right; workspace 3; move workspace to output right; workspace 4; move workspace to output right; workspace 5; move workspace to output right; workspace 6; move workspace to output right; workspace 7; move workspace to output right; workspace 8; move workspace to output right; workspace 9; move workspace to output right;
