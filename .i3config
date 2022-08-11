@@ -219,7 +219,7 @@ bar {
 # Multi screen support
 bindsym $mod+Ctrl+l move workspace to output right
 bindsym $mod+Ctrl+h move workspace to output left
-bindsym $mod+p exec autorandr common
+bindsym $mod+p exec xrandr --auto
 bindsym $mod+Shift+p exec autorandr horizontal
 bindsym $mod+Ctrl+p workspace 1; \
                     move workspace to output right; \
@@ -257,6 +257,7 @@ bindsym $mod+Ctrl+p workspace 1; \
                     move workspace to output right; \
                     workspace 19; \
                     move workspace to output right; \
+                    workspace 10;
 
 
 # Brightness
