@@ -47,6 +47,7 @@ autocmd VimEnter * :delcommand EnableStripWhitespaceOnSave
 """"""""""""""""
 Plugin 'elzr/vim-json'
 
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -132,5 +133,27 @@ hi SpellBad cterm=underline
 """""""""""""""""""""
 "  <leader> tricks  "
 """""""""""""""""""""
-:map <leader>c :set nohlsearch<CR>
+:map <leader>c :nohlsearch<CR>
+:map <leader>C :hlsearch<CR>
+:map <leader>w :set wrap<CR>
+:map <leader>W :set nowrap<CR>
+
+"""""""""""
+"  eclim  "
+"""""""""""
+:map <leader>b :JavaSearch <CR>
+:map <leader>B :JavaSearch -x all <CR>
+:map <leader>f :JavaSearch 
+
+:map <leader><CR> :JavaCorrect<CR>
+:map <leader>o :JavaOutline<CR>
+:map <leader>i :JavaImportOrganize<CR>
+
+:set switchbuf+=usetab,newtab
+
+""""""""""""""""""
+"  Kill Ex mode  "
+""""""""""""""""""
+
+:map Q <Nop>
 

@@ -13,11 +13,11 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+#font pango:monospace 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+font pango:DejaVu Sans Mono 6
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -217,47 +217,48 @@ bar {
 }
 
 # Multi screen support
-bindsym $mod+Ctrl+l move workspace to output right
-bindsym $mod+Ctrl+h move workspace to output left
-bindsym $mod+p exec xrandr --auto
+bindsym $mod+Ctrl+l  move workspace to output right
+bindsym $mod+Ctrl+h  move workspace to output left
+bindsym $mod+o       exec xrandr --auto
+bindsym $mod+p       exec autorandr common
 bindsym $mod+Shift+p exec autorandr horizontal
-bindsym $mod+Ctrl+p workspace 1; \
-                    move workspace to output right; \
-                    workspace 2; \
-                    move workspace to output right; \
-                    workspace 3; \
-                    move workspace to output right; \
-                    workspace 4; \
-                    move workspace to output right; \
-                    workspace 5; \
-                    move workspace to output right; \
-                    workspace 6; \
-                    move workspace to output right; \
-                    workspace 7; \
-                    move workspace to output right; \
-                    workspace 8; \
-                    move workspace to output right; \
-                    workspace 9; \
-                    move workspace to output right; \
-                    workspace 11; \
-                    move workspace to output right; \
-                    workspace 12; \
-                    move workspace to output right; \
-                    workspace 13; \
-                    move workspace to output right; \
-                    workspace 14; \
-                    move workspace to output right; \
-                    workspace 15; \
-                    move workspace to output right; \
-                    workspace 16; \
-                    move workspace to output right; \
-                    workspace 17; \
-                    move workspace to output right; \
-                    workspace 18; \
-                    move workspace to output right; \
-                    workspace 19; \
-                    move workspace to output right; \
-                    workspace 10;
+bindsym $mod+Ctrl+p  workspace 1; \
+                     move workspace to output right; \
+                     workspace 2; \
+                     move workspace to output right; \
+                     workspace 3; \
+                     move workspace to output right; \
+                     workspace 4; \
+                     move workspace to output right; \
+                     workspace 5; \
+                     move workspace to output right; \
+                     workspace 6; \
+                     move workspace to output right; \
+                     workspace 7; \
+                     move workspace to output right; \
+                     workspace 8; \
+                     move workspace to output right; \
+                     workspace 9; \
+                     move workspace to output right; \
+                     workspace 11; \
+                     move workspace to output right; \
+                     workspace 12; \
+                     move workspace to output right; \
+                     workspace 13; \
+                     move workspace to output right; \
+                     workspace 14; \
+                     move workspace to output right; \
+                     workspace 15; \
+                     move workspace to output right; \
+                     workspace 16; \
+                     move workspace to output right; \
+                     workspace 17; \
+                     move workspace to output right; \
+                     workspace 18; \
+                     move workspace to output right; \
+                     workspace 19; \
+                     move workspace to output right; \
+                     workspace 10;
 
 
 # Brightness
